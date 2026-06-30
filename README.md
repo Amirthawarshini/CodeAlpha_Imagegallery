@@ -1,40 +1,64 @@
-# 🖼️ Lumina Image Gallery
+# 🖼️ Image Gallery
 
-A responsive and interactive image gallery built using **HTML, CSS, and JavaScript** as part of my **CodeAlpha Web Development Internship**.<br><br>
+A modern and responsive **Image Gallery Web Application** built using **HTML5, CSS3, and JavaScript**. This project provides an interactive interface where users can explore images, filter them by categories, and view images with smooth animations.
 
-## ✨ Features
+## 🚀 Features
 
-* Responsive design for all devices<br>
-* Category-based image filtering<br>
-* Full-screen lightbox viewer<br>
-* Next/Previous navigation<br>
-* Keyboard and touch support<br>
-* Smooth hover effects and transitions<br><br>
+✨ **Image Filtering**
+- 🗂️ Filter images based on categories:
+  - 🌿 Nature
+  - 🏙️ City
+  - 🐾 Animals
+
+🔍 **Lightbox Gallery**
+- 🖼️ View images in full-screen mode
+- ⬅️➡️ Navigate between images
+- ❌ Close preview easily
+
+🎨 **Interactive UI**
+- 🌀 3D hover animation effects
+- 🌌 Animated particle background
+- 📱 Fully responsive layout
+- ⚡ Smooth transitions and modern design
 
 ## 🛠️ Technologies Used
 
-* HTML5<br>
-* CSS3<br>
-* JavaScript<br><br>
+🌐 **HTML5**
+- Structure and layout of the gallery
+
+🎨 **CSS3**
+- Styling, animations, responsive design, and visual effects
+
+⚙️ **JavaScript**
+- Image filtering
+- Lightbox functionality
+- User interactions
+
+✨ **Particle.js**
+- Animated background effects
 
 ## 📂 Project Structure
 
-```text
-CodeAlpha_Image_Gallery/
-├── Image_Gallery.html
-└── README.md
-```
+📁 Image_Gallery  
+│  
+├── 📄 index.html  
+├── 🎨 style.css  
+├── ⚙️ script.js  
+└── 📘 README.md  
 
-## 🚀 What I Learned
+## ▶️ How to Run
 
-* Responsive web design<br>
-* CSS Grid and Flexbox<br>
-* JavaScript DOM manipulation<br>
-* Event handling and user interaction<br>
-* GitHub Pages deployment<br><br>
+1️⃣ Clone the repository:
 
-## 🙏 Acknowledgement
+git clone https://github.com/Amirthawarshini/CodeAlpha_Imagegallery.git
 
-Developed as part of the **CodeAlpha Web Development Internship**.<br><br>
+2️⃣ Open the project folder.
 
-⭐ Feel free to star the repository if you like the project!
+3️⃣ Run `index.html` in your web browser.
+
+## 🎯 Future Enhancements
+
+🔹 Add search functionality  
+🔹 Add image upload option  
+🔹 Add dark mode support  
+🔹 Add image download feature  
