@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery with Filters</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Particle Background Container -->
+  <div id="particles-js"></div>
+
+  <h1 class="title">Image Gallery</h1>
+
+  <div class="filters">
+    <button class="filter-btn" onclick="filterImages('all')">All</button>
+    <button class="filter-btn" onclick="filterImages('nature')">Nature</button>
+    <button class="filter-btn" onclick="filterImages('city')">City</button>
+    <button class="filter-btn" onclick="filterImages('animal')">Animals</button>
+  </div>
+
+  <div class="gallery">
+    <!-- Nature Images -->
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=60" class="gallery-item" data-category="nature" alt="Nature">
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=60" class="gallery-item" data-category="nature" alt="Nature">
+    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=600&q=60" class="gallery-item" data-category="nature" alt="Nature">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRffDEyrQHlvpM4IGA-Y4hqN2iis1xUC4sk6w&s" class="gallery-item" data-category="nature" alt="Nature">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls.jpg" class="gallery-item" data-category="nature" alt="Nature">
+
+    <!-- City Images -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg" class="gallery-item" data-category="city" alt="City">
+    <img src="https://c02.purpledshub.com/uploads/sites/41/2023/04/Shanghai-14fcc7a.jpg?w=1029&webp=1" class="gallery-item" data-category="city" alt="City">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW-6S_OE_jaSX52m553IvRJpZ6EYA5-3yWkg&s" class="gallery-item" data-category="city" alt="City">
+    <img src="https://www.amny.com/wp-content/uploads/2022/08/GettyImages-523538287.jpg?quality=51&w=1200" class="gallery-item" data-category="city" alt="City">
+  
+    <!-- Animal Images -->
+    <img src="https://i.natgeofe.com/n/bec7bd50-0d57-4982-aeb5-82e5f8184f89/02-machine-saving-animals-nationalgeographic_1977490.jpg" class="gallery-item" data-category="animal" alt="Animal">
+    <img src="https://www.colchesterzoologicalsociety.com/wp-content/uploads/2024/09/Tiger-600x380.jpg" class="gallery-item" data-category="animal" alt="Animal">
+    <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=600&q=60" class="gallery-item" data-category="animal" alt="Animal">
+    <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=600&q=60" class="gallery-item" data-category="animal" alt="Animal">
+  
+    <!-- Mixed -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg/960px-Altja_j%C3%B5gi_Lahemaal.jpg" class="gallery-item" data-category="nature" alt="Nature">
+    <img src="https://toposmagazine.com/wp-content/uploads/2023/07/chongqing-jerry-wang-Hqf58s2C1lg-unsplash-scaled.jpg" class="gallery-item" data-category="city" alt="City">
+    <img src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?auto=format&fit=crop&w=600&q=60" class="gallery-item" data-category="animal" alt="Animal">
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" />
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
