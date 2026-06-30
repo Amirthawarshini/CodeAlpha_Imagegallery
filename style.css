@@ -3,11 +3,13 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background: #f5f7fa;
+    background: #090979;
+    background: linear-gradient(135deg, #090979, #00d4ff);
     z-index: -2;
-  }
-  
-/* Animated Gradient Background */
+}
+
+
+/* Animated Aurora Background */
 body::before {
     content: "";
     position: fixed;
@@ -16,30 +18,44 @@ body::before {
     height: 100%;
     width: 100%;
     z-index: -1;
-    background: linear-gradient(270deg, #00c9ff, #92fe9d, #ff758c, #ff7eb3);
-    background-size: 800% 800%;
-    animation: animatedBackground 20s ease infinite;
-    opacity: 0.25;
-    filter: blur(30px);
-  }
-  
-  @keyframes animatedBackground {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  
+
+    background:
+        radial-gradient(circle at 20% 30%, #00f5ff, transparent 40%),
+        radial-gradient(circle at 80% 70%, #ff00cc, transparent 40%),
+        radial-gradient(circle at 50% 50%, #6600ff, transparent 50%);
+
+    animation: auroraMove 15s ease infinite;
+    opacity: 0.35;
+    filter: blur(60px);
+}
+
+
+@keyframes auroraMove {
+    0% {
+        transform: translate(0,0);
+    }
+
+    50% {
+        transform: translate(40px,-30px);
+    }
+
+    100% {
+        transform: translate(0,0);
+    }
+}
+
 
 /* General Body Styling */
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to right, #f8f9fa, #e0e0e0);
+    background: #050816;
     text-align: center;
-  }
-  
-  /* Title/Header */
-  .title {
+}
+
+
+/* Title/Header */
+.title {
     background: linear-gradient(to right, #141E30, #243B55);
     color: #ffffff;
     padding: 1.5rem;
@@ -47,109 +63,204 @@ body {
     font-weight: 700;
     letter-spacing: 2px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Filter Buttons */
-  .filters {
+}
+
+
+/* Filter Buttons */
+.filters {
     margin: 2rem 0;
-  }
-  
-  .filter-btn {
+}
+
+
+.filter-btn {
     margin: 0.5rem;
     padding: 0.8rem 1.6rem;
     border: none;
     font-size: 1rem;
+
     background: linear-gradient(135deg, #1e90ff, #00bcd4);
+
     color: white;
     border-radius: 25px;
     cursor: pointer;
+
     transition: all 0.3s ease-in-out;
+
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  .filter-btn:hover {
+}
+
+
+.filter-btn:hover {
     transform: scale(1.1);
+
     background: linear-gradient(135deg, #007acc, #009688);
-  }
-  
-  /* Gallery Grid */
-  .gallery {
+}
+
+
+/* Gallery Grid */
+.gallery {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
     gap: 20px;
+
     padding: 20px;
+
     max-width: 1200px;
+
     margin: auto;
-  }
-  
-  .gallery-item {
+}
+
+
+
+.gallery-item {
+
     width: 100%;
+
     height: auto;
+
     cursor: pointer;
+
     border-radius: 15px;
-    transition: transform 0.3s ease, filter 0.3s, box-shadow 0.3s;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s,
+        box-shadow 0.3s;
+
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+
     transform-style: preserve-3d;
+
     perspective: 1000px;
-  }
-  
-  
-  .gallery-item:hover {
+}
+
+
+
+.gallery-item:hover {
+
     transform: scale(1.05);
+
     filter: brightness(85%);
-    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Lightbox */
-  .lightbox {
+
+    box-shadow: 0 12px 18px rgba(0,0,0,0.3);
+
+}
+
+
+
+/* Lightbox */
+
+.lightbox {
+
     display: none;
+
     position: fixed;
+
     z-index: 999;
-    top: 0; left: 0;
+
+    top: 0;
+    left: 0;
+
     width: 100%;
+
     height: 100%;
+
     background-color: rgba(0,0,0,0.9);
+
     align-items: center;
+
     justify-content: center;
+
     flex-direction: column;
-  }
-  
-  .lightbox-img {
+
+}
+
+
+
+.lightbox-img {
+
     max-width: 90%;
+
     max-height: 80%;
+
     border-radius: 15px;
-  }
-  
-  .close {
+
+}
+
+
+
+.close {
+
     position: absolute;
+
     top: 20px;
+
     right: 40px;
+
     font-size: 40px;
+
     color: white;
+
     cursor: pointer;
-  }
-  
-  .prev, .next {
+
+}
+
+
+
+.prev, .next {
+
     position: absolute;
+
     top: 50%;
+
     font-size: 40px;
+
     padding: 10px;
+
     color: white;
+
     cursor: pointer;
+
     background: rgba(0,0,0,0.4);
+
     border-radius: 50%;
+
     border: none;
+
     transform: translateY(-50%);
-  }
-  
-  .prev:hover, .next:hover {
+
+}
+
+
+
+.prev:hover, .next:hover {
+
     background: rgba(255,255,255,0.2);
-  }
-  
-  .prev { left: 20px; }
-  .next { right: 20px; }
-  
-  @media screen and (max-width: 600px) {
-    .prev, .next { font-size: 30px; }
-  }
-  
+
+}
+
+
+
+.prev {
+    left:20px;
+}
+
+
+.next {
+    right:20px;
+}
+
+
+
+@media screen and (max-width:600px) {
+
+    .prev, .next {
+
+        font-size:30px;
+
+    }
+
+}
